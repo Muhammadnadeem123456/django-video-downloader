@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .login-button {
+        background-color: #0051A1;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 5px 25px;
+        font-size: 16px;
+        box-shadow: 0px 0px 2px 0px #000;
+    }
+
+    .icon {
+        margin-right: 5px;
+        display: none;
+    }
+
+    .loading {
+        background-color: #014B94;
+        color: #eee;
+    }
+
+    .loading .icon {
+        display: inline-block;
+        color: #eee;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <button id="btn" class="login-button">Log In</button>
+</body>
+
+
+<script>
+
+    let a = document.getElementsByClassName('login-button');
+    for (var i = 0; i < a.length; i++) {
+        a[i].addEventListener("click", function () {
+            this.classList.add("loading");
+            this.innerHTML = "<span class='icon'>&#8987;</span>Loading";
+            console.log('i am click');
+        });
+    }
+    // a.addEventListener("click", function () {
+
+    //     console.log('I am click')
+    // });
+</script>
+
+
+
+
+</html>
